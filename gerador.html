@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Robux - Grátis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .mensagem {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Gerador de Robux Grátis</h1>
+    <p>Insira seu nome de usuário e a quantidade de Robux desejada:</p>
+    <input type="text" id="usuario" placeholder="Nome de usuário">
+    <input type="number" id="robux" placeholder="Quantidade de Robux">
+    <button onclick="gerarRobux()">Gerar Robux</button>
+    <p id="mensagem" class="mensagem"></p>
+</div>
+
+<script>
+    function gerarRobux() {
+        var usuario = document.getElementById("usuario").value;
+        var robux = document.getElementById("robux").value;
+        if (usuario && robux) {
+            document.getElementById("mensagem").innerHTML = 
+            "Parabéns " + usuario + "! Você acabou de gerar " + robux + " Robux!<br>BRINCADEIRA! Não existe gerador de Robux grátis!";
+        } else {
+            document.getElementById("mensagem").innerHTML = "Por favor, insira todas as informações.";
+        }
+    }
+</script>
+
+</body>
+</html>
